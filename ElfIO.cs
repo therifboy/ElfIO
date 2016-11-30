@@ -68,6 +68,9 @@ namespace ElfIO
 
             // Initialize Elf
             elf = new Elf(elfhdr, elfprogs, elfsects);
+
+            // Close stream
+            stream.Close();
         }
 
         public void Save(String filename)
